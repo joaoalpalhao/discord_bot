@@ -6,7 +6,7 @@ This is my first attempt at creating a nodejs Discord bot. Bot will be update as
 
 ## Install
 
-Clone this repo to your working directory. After that just simple do a npm install:
+Clone this repo to your working directory. After that just simply do a npm install:
 
 ```sh
 $ npm install
