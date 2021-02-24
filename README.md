@@ -14,7 +14,7 @@ $ yarn
 
 Next, replace the **.env.example** with your **.env** file.
 
-# .env
+### .env
 
 Use this table as a guide for the current **.env** configuration and change it as you want.
 
