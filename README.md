@@ -1,3 +1,5 @@
+![](logo/logo_typography.png)
+
 ## Discord bot
 
 This is my first attempt at creating a nodejs Discord bot. Bot will be update as I explore new features within [discord.js](https://discord.js.org/#/) library.
