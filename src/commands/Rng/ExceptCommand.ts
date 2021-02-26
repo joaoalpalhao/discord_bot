@@ -10,7 +10,7 @@ const setUsage = (str: string): void => {
 };
 export const name: string = 'except';
 export let usage = `<mentions> [number]`;
-export const category: string = 'Ramdomize all users in a voice channel except the ones mentioned.';
+export const category: string = 'Randomize all users in a voice channel except the ones mentioned.';
 export const run: RunFunction = async (client, message, args: any, parent) => {
   // Set usage
   setUsage(`${prefix}${parent.name} ${name} <mentions> [number]`);

@@ -10,7 +10,7 @@ const setUsage = (str: string): void => {
 };
 export const name: string = 'all';
 export let usage = `[number]`;
-export const category: string = 'Ramdomize all users in a voice channel.';
+export const category: string = 'Randomize all users in a voice channel.';
 export const run: RunFunction = async (client, message, args, parent) => {
   // Set usage
   setUsage(`${prefix}${parent.name} ${name} [number]`);
