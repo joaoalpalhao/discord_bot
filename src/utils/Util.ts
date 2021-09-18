@@ -24,9 +24,9 @@ export default class Util {
   }
 
   static validateIterator(iterator: any) {
-    if (isNaN(iterator) || iterator === "undefined") return new Error('You must insert a valid ***number***.');
-    if (iterator <= 0) return new Error('You must insert a ***number*** bigger than **0**.');
-    if (Number.isInteger(iterator)) return new Error('You must insert a ***number*** with no decimal places.');
+    if (isNaN(iterator) || iterator === "undefined") throw new Error('You must insert a valid ***number***.');
+    if (iterator <= 0) throw new Error('You must insert a ***number*** bigger than **0**.');
+    if (iterator % 1 != 0) throw new Error('You must insert a ***number*** with no decimal places.');
   }
 
   static printWithdrawalUsers(members: Collection<string, GuildMember>): string {

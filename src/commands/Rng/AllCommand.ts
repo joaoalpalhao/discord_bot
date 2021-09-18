@@ -17,6 +17,7 @@ export const run: RunFunction = async (client, message, args, parent) => {
 
   const channel: GuildChannel = message.guild.channels.cache.get(message.member.voice.channelID);
   const members: Collection<string, GuildMember> = channel.members;
+  //members.delete('642928043437981726');
   const chosenMembers: Collection<string, GuildMember> = new Collection();
 
   if (!args[0]) {
@@ -28,12 +29,13 @@ export const run: RunFunction = async (client, message, args, parent) => {
     // Shows usage for this command
     return await message.channel.send(`Type \`${usage}\``);
   } else {
-    const amount: number = parseInt(args[0]);
+    const iterator: string = args[0];
     try {
-      Util.validateIterator(amount);
+      Util.validateIterator(iterator);
     } catch (e) {
-      return await message.channel.send(e);
+      return await message.channel.send(`${e.message} Type ${usage}`);
     }
+    const amount: number = parseInt(iterator);
     if (amount > members.size) {
       return await message.channel.send(`You\'re withdrawing more members than the ones on your voice channel.`);
     }
